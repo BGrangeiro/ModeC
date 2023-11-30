@@ -1,0 +1,46 @@
+//Crie um programa que receba N  numeros (N < 100), e calcule a soma de todos eles. ( vectors )
+
+#include <stdio.h>
+
+int main (void){
+
+    int vet[100];
+    int sum = 0, counter2 = 0;
+    char continuar;
+    
+    printf("Type the numbers to be added (= 0, breaking): \n");
+
+    do
+    {  
+        printf("Digite o numero: ");
+        scanf("%d", &vet[counter2]);
+
+        if ( vet[counter2] == 0) {
+            continuar = '0';
+        
+        } else {
+            sum += vet[counter2];
+            counter2++;
+
+            printf("Deseja continuar a soma? [s/0]\n");
+            scanf(" %c", &continuar);
+        }
+              
+    } while (continuar != '0' && counter2 < 100);
+    
+    printf("O valor final da soma e igual a: %d", sum);
+
+    return 0;
+}
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
