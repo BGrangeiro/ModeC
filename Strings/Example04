@@ -24,7 +24,7 @@ correto. No entanto, tenha em mente que, se a string digitada pelo usuário for 
 que quatro caracteres, você estará acessando partes da memória não inicializadas, o 
 que pode levar a comportamentos indefinidos.
 
-Para evitar isso, você pode garantir que está lendo no máximo três caracteres usando 
+Para evitar isso, você pode garantir que está lendo no máximo quatro caracteres usando 
 o formato %4s no scanf. Isso evita potenciais problemas de estouro de buffer. Example: 
 
 #include <stdio.h>
