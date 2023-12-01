@@ -1,0 +1,42 @@
+// faça um programa que leia um nome e imprima as 4 primeiras letras do nome.
+
+#include <stdio.h>
+
+int main (){
+
+    char str [50];
+    printf("Enter a name: ");
+    scanf("%s", str);
+
+    for(int i = 0; i < 4 ; ++i){
+
+        printf("%c", str[i]);
+    }
+
+    return 0;
+
+}
+
+/*
+
+Se você deseja imprimir os primeiros quatro caracteres da string, o código está 
+correto. No entanto, tenha em mente que, se a string digitada pelo usuário for menor 
+que quatro caracteres, você estará acessando partes da memória não inicializadas, o 
+que pode levar a comportamentos indefinidos.
+
+Para evitar isso, você pode garantir que está lendo no máximo três caracteres usando 
+o formato %4s no scanf. Isso evita potenciais problemas de estouro de buffer. Example: 
+
+#include <stdio.h>
+
+int main() {
+    char str[50];
+    printf("Digite um nome: ");
+    scanf("%s", str);
+
+    printf("%.4s", str);
+
+    return 0;
+}
+
+*/
