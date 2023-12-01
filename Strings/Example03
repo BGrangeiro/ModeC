@@ -1,0 +1,22 @@
+//  Entre com um nome e imprima o nome somente se a primeira letra do nome for ‘a’ (maiuscula ou minuscula).
+
+#include <stdio.h>
+
+
+int main (void){
+
+    char str [50];
+    printf("type your name: ");
+    scanf("%49[^\n]s", str);
+
+    if (str[0] == 'a' || str[0] == 'A'){
+
+        printf("%s <3", str);
+    
+    }else {
+        printf("The name entered does not star whith A!");
+    }
+
+    return 0;
+
+}
