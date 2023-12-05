@@ -1,0 +1,35 @@
+//Ler nome, sexo e idade. Se sexo for feminino e idade menor que 25, imprime o nome da pessoa e a palavra “ACEITA”, caso contrario imprimir “NãO ACEITA”.
+// Ref: https://www.youtube.com/watch?v=PAwxGsU30D4
+
+#include <stdio.h>
+#include <ctype.h>
+
+void tiny (char s1[]){
+    int counter =0;
+    while(s1[counter] != '\0'){
+        s1[counter] = tolower(s1[counter]);
+        counter++;
+    }
+}
+
+int main (){
+
+    char str[50], str1[10];
+    int age;
+
+    printf("- Type your name: ");
+    scanf("%49[^\n]s", str);
+
+    printf("- Male or Female? : ");
+    scanf("%s", str1);
+
+    printf("- Enter your age: ");
+     scanf("%d", &age);
+
+     if (str1 == 'female' && age < 25) printf("Aceita!");
+     else{
+            printf("Nao aceita!");
+     }
+     return 0;
+
+}
