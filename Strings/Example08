@@ -1,0 +1,34 @@
+//Crie um programa que compara duas strings (nao use a funcão strcmp)
+
+#include <stdio.h>
+
+int comp (char str1[], char str2[]){
+    int fals = 0;
+    while( str1[fals] != '\0' && str2[fals] != '\0'){
+        
+        if(str1[fals] != str2[fals]){
+            return 0; // strings diferentes
+        }
+        fals++;
+    }
+    return (str1[fals] == '\0' && str2[fals] == '\0'); // Retorna 1 se as duas strings forem iguais
+}
+
+int main (){
+
+    char str0[100];
+    char str1[100];
+
+    printf("Digite a primeira string: ");
+    scanf("%s", str0);
+    printf("Digite a segunda string: ");
+    scanf("%s", str1);
+
+    int result = comp (str0,str1);
+    
+    if (result == 0) printf("Sao diferentes!");
+    if( result == 1) printf("Sao iguais!");
+
+    return 0;
+
+}
