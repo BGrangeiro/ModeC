@@ -1,0 +1,35 @@
+/*Construa uma estrutura aluno com nome, numero de matrıcula e curso. Leia do usuarioa informaçao de 5 alunos,
+ armazene em vetor dessa estrutura e imprima os dados na tela*/
+
+ #include <stdio.h>
+
+ struct Infoalunos {
+    char nome [100], curso[100];
+    int mat;
+ };
+
+ int main (void){
+
+    struct Infoalunos coleta[5];
+
+    for (int i = 0; i < 5; ++i){
+        
+        printf("Digite o nome do aluno %d: ", i+1);
+        fgets(coleta[i].nome, sizeof(coleta[i].nome), stdin);
+
+        printf("Digite curso do aluno %d: ", i+1);
+        fgets(coleta[i].curso, sizeof(coleta[i].curso), stdin);
+    
+        printf("Digite a matricula do aluno %d: ", i+1);
+        scanf("%d", &coleta[i].mat);
+
+        while(getchar() != '\n');
+    }
+    printf("\n-- Info Salvas: --\n\n");
+    
+    for (int i = 0; i < 5; ++i){
+        printf("Aluno %d:\n\nNome: %sCurso: %sMatricula: %d.", i+1,coleta[i].nome,coleta[i].curso, coleta[i].mat);
+        printf("\n\n");
+    }
+    return 0;
+ }
